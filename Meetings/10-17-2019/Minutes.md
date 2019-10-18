@@ -52,27 +52,27 @@ Decided to use Google Docs for collaboration on PSD
 The second LCD is a widely used graphical LCD that requires a C graphics library and, in my opinion, a 32 bit microcontroller with plenty of flash and RAM. If you'd like to go down that route, that's perfectly acceptable, although of course I wouldn't suggest you do that.
 Hope that helps.
 >> - Andrew
-&nbsp
+>
 
 - [ ] @brjemmet Blaine:  Post initial parts list
 > Completed: xx\xx\xxxx
-&nbsp
+>
 
 - [ ] Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
 > Completed: xx\xx\xxxx
-&nbsp
+>
 
 - [ ] Jackie:  Create PDS document in Google Docs
 > Completed: xx\xx\xxxx
-&nbsp
+>
 
  - [ ] Jackie:  Work on PDS in Google Docs
 > Completed: xx\xx\xxxx
-&nbsp
+>
 
 - [ ] Jackie:  Post compledted PDS to GIT prior to due date
 > Completed: xx\xx\xxxx
-&nbsp
+>
 
 
 
