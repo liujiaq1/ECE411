@@ -2,11 +2,11 @@
 
 > ## 10/17/2019
   
-### Attendees
-Blaine
-Jackie
-Wenhao
-Xuening
+>>### Attendees
+>>>Blaine
+>>>Jackie
+>>>Wenhao
+>>>Xuening
 		
 ### Homework
 Sorted out the differences between HW2 for Lecture vs Practicum
