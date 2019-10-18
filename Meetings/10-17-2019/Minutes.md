@@ -27,11 +27,13 @@ Talked about and agreed on using GPS Receiver - GP-735 (56 Channel)
 Agreed on highlevel block diagram 
 </pre>
 
+<center>
 <table>
   <tr>
-    <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png" alt="Block Diagram" width="500" height="600">
+    <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png" alt="Block Diagram" width="250" height="300">
   </tr>
 </table>
+</center>
 
 <pre>
 Discussed pros and cons about simple character LCDs versus graphic LCDs. 
