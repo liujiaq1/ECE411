@@ -76,7 +76,7 @@ Hope that helps.
 >> - Andrew
 >
 
-- [ ] @brjemmet Blaine:  Post initial parts list
+- [ ] Blaine:  Post initial parts list
 > Completed: xx\xx\xxxx
 >
 
