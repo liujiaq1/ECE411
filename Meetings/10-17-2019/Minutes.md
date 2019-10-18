@@ -67,7 +67,7 @@ Decided to use Google Docs for collaboration on PSD
 
 # ARs
 
-## Blaine: email Eric and Andrew about which LCD type would be accepable for the project 
+### Blaine: email Eric and Andrew about which LCD type would be accepable for the project 
 - [x] Completed: 10\17\2019
 >> [Andrew's Response. email 10/17/2019] I'm not sure what you mean by "acceptable". Both LCDs are perfectly acceptable as "actuators" in the practicum project.
 **The first LCD is simple to use character-based LCD, straight forward to use, and would make an excellent choice for a simple practicum project.**
@@ -77,24 +77,24 @@ Hope that helps.
 > Will use [Simple 16x2 Character LCD](https://www.sparkfun.com/products/14073/)
 >
 
-## Blaine:  Post initial parts list
-- [ ]Completed: xx\xx\xxxx
+### Blaine:  Post initial parts list
+- [ ] Completed: xx\xx\xxxx
 >
 
-- [ ] Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
-> Completed: xx\xx\xxxx
+### Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
+- [ ] Completed: xx\xx\xxxx
 >
 
-- [ ] Jackie:  Create PDS document in Google Docs
-> Completed: xx\xx\xxxx
+### Jackie:  Create PDS document in Google Docs
+- [ ] Completed: xx\xx\xxxx
 >
 
- - [ ] Jackie:  Work on PDS in Google Docs
-> Completed: xx\xx\xxxx
+### Jackie:  Work on PDS in Google Docs
+- [ ] Completed: xx\xx\xxxx
 >
 
-- [ ] Jackie:  Post compledted PDS to GIT prior to due date
-> Completed: xx\xx\xxxx
+### Jackie:  Post compledted PDS to GIT prior to due date
+- [ ] Completed: xx\xx\xxxx
 >
 
 
