@@ -17,8 +17,14 @@ Discussed each persons background, skills, and classes
 Talked about 
 </pre>
 ![Block Diagram](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
-![Simple 16x2 Character LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
-![128x32 Pixel LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
+![Simple 16x2 Character LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD1.png)
+![128x32 Pixel LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD2.png)
+
+https://www.sparkfun.com/products/14073
+https://www.digikey.com/product-detail/en/newhaven-display-intl/NHD-C12832A1Z-NSW-BBW-3V3/NHD-C12832A1Z-NSW-BBW-3V3-ND/2059235
+
+
+
 
 # ARs
 
@@ -31,13 +37,28 @@ Hope that helps.
 >> - Andrew
 >
 
-- [ ] Blaine:  
+- [ ] Blaine:  Post initial parts list
 > Completed: xx\xx\xxxx
 >
 
-- [ ] Jackie:  
+- [ ] Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
 > Completed: xx\xx\xxxx
 >
+
+- [ ] Jackie:  Create PDS document in Google Docs
+> Completed: xx\xx\xxxx
+>
+
+ - [ ] Jackie:  Work on PDS in Google Docs
+> Completed: xx\xx\xxxx
+>
+
+- [ ] Jackie:  Post compledted PDS to GIT prior to due date
+> Completed: xx\xx\xxxx
+>
+
+
+
 
 Test Link [StackEdit](https://stackedit.io/).
 
