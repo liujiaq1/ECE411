@@ -1,6 +1,6 @@
 # Meetings
 
-> ## 10/17/2019
+~ ## 10/17/2019
   
 ### Attendees
 Blaine
