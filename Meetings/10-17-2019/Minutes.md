@@ -26,7 +26,9 @@ Agreed on highlevel block diagram
 ![Block Diagram](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
 
 <pre>
-Discussed pros and cons about simple character LCDs versus graphic LCDs. Compared simple 16x2 Character LCD to 128x32 graphics LCD. Decided to send email to ask for advice on required complexity of the project. 
+Discussed pros and cons about simple character LCDs versus graphic LCDs. 
+Compared simple 16x2 Character LCD to 128x32 graphics LCD. 
+Decided to send email to ask for advice on required complexity of the project. 
 </pre>
 
 [Simple 16x2 Character LCD](https://www.sparkfun.com/products/14073)
