@@ -16,6 +16,9 @@ Sorted out the differences between HW2 for Lecture vs Practicum
 Discussed each persons background, skills, and classes
 Talked about 
 </pre>
+![Block Diagram](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
+![Simple 16x2 Character LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
+![128x32 Pixel LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
 
 # ARs
 
@@ -55,4 +58,4 @@ This is another regular paragraph.
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
-![GitHub Logo](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
+
