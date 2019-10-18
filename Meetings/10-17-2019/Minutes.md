@@ -17,7 +17,12 @@ Discussed each persons background, skills, and classes
 Talked about and agreed on using GPS Receiver - GP-735 (56 Channel)
 </pre
 
-[GPS Receiver - GP-735 (56 Channel)](https://www.sparkfun.com/products/13670)
+<table>
+  <tr>
+    <th><a href="https://www.sparkfun.com/products/13670" title="GPS Receiver - GP-735 (56 Channel)">GPS Receiver - GP-735 (56 Channel)</a></th>
+  </tr>
+  <tr>
+</table>
 
 <pre>
 Agreed on highlevel block diagram 
