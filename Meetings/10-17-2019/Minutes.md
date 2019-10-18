@@ -31,6 +31,15 @@ Compared simple 16x2 Character LCD to 128x32 graphics LCD.
 Decided to send email to ask for advice on required complexity of the project. 
 </pre>
 
+<table>
+  <tr>
+    <th>Simple 16x2 Character LCD</th> & <th>128x32 Graphics LCD</th>
+  </tr>
+  <tr>
+    &
+  </tr>
+</table>
+
 [Simple 16x2 Character LCD](https://www.sparkfun.com/products/14073)
 ![Simple 16x2 Character LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD1.png)
 [128x32 Graphics LCD](https://www.digikey.com/product-detail/en/newhaven-display-intl/NHD-C12832A1Z-NSW-BBW-3V3/NHD-C12832A1Z-NSW-BBW-3V3-ND/2059235)
