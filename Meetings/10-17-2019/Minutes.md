@@ -18,8 +18,9 @@ Talked about
 </pre>
 ![Block Diagram](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
 ![Simple 16x2 Character LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD1.png)
-![128x32 Pixel LCD](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD2.png)
+![[128x32 Pixel LCD](https://www.digikey.com/product-detail/en/newhaven-display-intl/NHD-C12832A1Z-NSW-BBW-3V3/NHD-C12832A1Z-NSW-BBW-3V3-ND/2059235)](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD2.png)
 
+[links]()
 https://www.sparkfun.com/products/14073
 https://www.digikey.com/product-detail/en/newhaven-display-intl/NHD-C12832A1Z-NSW-BBW-3V3/NHD-C12832A1Z-NSW-BBW-3V3-ND/2059235
 
