@@ -2,11 +2,11 @@
 
 > ## 10/17/2019
   
->>### Attendees
->>>Blaine
->>>Jackie
->>>Wenhao
->>>Xuening
+### Attendees
+Blaine
+Jackie
+Wenhao
+Xuening
 		
 ### Homework
 Sorted out the differences between HW2 for Lecture vs Practicum
@@ -23,4 +23,4 @@ Talked about
 The second LCD is a widely used graphical LCD that requires a C graphics library and, in my opinion, a 32 bit microcontroller with plenty of flash and RAM. If you'd like to go down that route, that's perfectly acceptable, although of course I wouldn't suggest you do that.
 Hope that helps.
 > - Andrew
-				
+>				
