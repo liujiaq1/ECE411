@@ -1,6 +1,6 @@
 # Meetings
 
-$/quad$ ## 10/17/2019
+## 10/17/2019
   
 ### Attendees
 Blaine
@@ -24,3 +24,12 @@ The second LCD is a widely used graphical LCD that requires a C graphics library
 Hope that helps.
 >> - Andrew
 > 				
+
+> Written with [StackEdit](https://stackedit.io/).
+>
+normal
+>> test
+test
+test
+>>
+normal
