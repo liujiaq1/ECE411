@@ -33,12 +33,16 @@ Decided to send email to ask for advice on required complexity of the project.
 
 <table>
   <tr>
-    <th>Simple 16x2 Character LCD</th> & <th>128x32 Graphics LCD</th>
+    <th>Simple 16x2 Character LCD</th> 
+    <th>128x32 Graphics LCD</th>
   </tr>
   <tr>
-    <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD1.png" alt="Simple 16x2 Character LCD">
-    &
-    <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD2.png" alt="128x32 Graphics LCD">
+    <td>
+      <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD1.png" alt="Simple 16x2 Character LCD">
+    </td>
+    <td>
+      <img src="https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/LCD2.png" alt="128x32 Graphics LCD">
+    </td>
   </tr>
 </table>
 
