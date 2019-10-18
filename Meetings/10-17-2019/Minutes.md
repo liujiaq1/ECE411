@@ -55,4 +55,4 @@ This is another regular paragraph.
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](https://github.com/liujiaq1/ECE411-Team9/blob/master/Meetings/10-17-2019/BlockDiagram.png)
