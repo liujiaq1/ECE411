@@ -14,6 +14,7 @@ Sorted out the differences between HW2 for Lecture vs Practicum
 # Project
 <pre>
 Discussed each persons background, skills, and classes
+Agreed on GPS clock
 Talked about and agreed on using GPS Receiver - GP-735 (56 Channel)
 </pre
 
