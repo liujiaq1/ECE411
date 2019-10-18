@@ -3,19 +3,26 @@
 ## 10/17/2019
   
 ### Attendees
+<pre>
 Blaine
 Jackie
 Wenhao
 Xuening
-		
+</pre>
+
 ### Homework
+<pre>
 Sorted out the differences between HW2 for Lecture vs Practicum
+</pre>
 
 ### Project
+<pre>
 Discussed each persons background, skills, and classes
 Talked about 
+</pre>
 
 ### ARs
+<pre>
 * Blaine: email Eric and Andrew about which LCD type would be accepable for the project 
 
 -[x] BRJ 10/17/2019
@@ -26,6 +33,7 @@ Hope that helps.
 >> - Andrew
 > 				
 
+</pre>
 > Test Link [StackEdit](https://stackedit.io/).
 
 This is a regular paragraph.
