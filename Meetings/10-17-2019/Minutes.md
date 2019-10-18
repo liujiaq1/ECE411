@@ -79,27 +79,27 @@ Hope that helps.
 
 ### Blaine:  Post initial parts list
 - [ ] Completed: xx\xx\xxxx
-> Inseter info or delete
+> Insert info or delete
 >
 
 ### Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
 - [ ] Completed: xx\xx\xxxx
-> Inseter info or delete
+> Insert info or delete
 >
 
 ### Jackie:  Create PDS document in Google Docs
 - [ ] Completed: xx\xx\xxxx
-> Inseter info or delete
+> Insert info or delete
 >
 
 ### Jackie:  Work on PDS in Google Docs
 - [ ] Completed: xx\xx\xxxx
-> Inseter info or delete
+> Insert info or delete
 >
 
 ### Jackie:  Post compledted PDS to GIT prior to due date
 - [ ] Completed: xx\xx\xxxx
-> Inseter info or delete
+> Insert info or delete
 >
 
 
