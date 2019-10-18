@@ -37,7 +37,7 @@ Hope that helps.
 >> - Andrew
 >
 
-- [ ] Blaine:  Post initial parts list
+- [ ] @brjemmet Blaine:  Post initial parts list
 > Completed: xx\xx\xxxx
 >
 
@@ -62,21 +62,8 @@ Hope that helps.
 
 Test Link [StackEdit](https://stackedit.io/).
 
->
 
-This is a regular paragraph.
-<pre>test</pre>
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+ @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
 
-This is another regular paragraph.
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
 
 
