@@ -92,7 +92,7 @@ Hope that helps.
 > Insert info or delete
 >
 
-### Jackie:  Work on PDS in Google Docs
+### All:  Work on PDS in Google Docs
 - [ ] Completed: xx\xx\xxxx
 > Insert info or delete
 >
