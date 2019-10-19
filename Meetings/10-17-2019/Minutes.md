@@ -79,8 +79,7 @@ Hope that helps.
 >
 
 ### Blaine:  Post initial parts list
-- [ ] Completed: xx\xx\xxxx
-> Insert info or delete
+- [x] Completed: 10\18\2019
 >
 
 ### Jackie:  Markup practicum HW2, Post to Git, and email Andrew and Eric as soon as possible
