@@ -17137,9 +17137,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND25" library="SparkFun" deviceset="GND" device=""/>
 <part name="C12" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
 <part name="C15" library="SparkFun-Capacitors" deviceset="10UF-POLAR" device="-EIA3216-16V-10%(TANT)" value="10uF"/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M10" device="SMD_COMBO">
-<attribute name="PROD_ID" value="CONN-11219"/>
-</part>
 <part name="Y1" library="SparkFun-Clocks" deviceset="RESONATOR-16MHZ" device="SMD_3.2X1.3" value="16MHz"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="AVR_SPI_PROG_3X2" device="SMD" value="ISP">
 <attribute name="PROD_ID" value="CONN-11415"/>
@@ -17194,6 +17191,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="U$10" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M10" device="SMD_COMBO">
+<attribute name="PROD_ID" value="CONN-11219"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -17215,31 +17215,31 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="38.1" y1="20.32" x2="38.1" y2="58.42" width="0.1524" layer="97"/>
 <wire x1="38.1" y1="58.42" x2="111.76" y2="58.42" width="0.1524" layer="97"/>
 <wire x1="111.76" y1="58.42" x2="111.76" y2="20.32" width="0.1524" layer="97"/>
-<wire x1="241.3" y1="195.58" x2="241.3" y2="177.8" width="0.1524" layer="97"/>
-<wire x1="241.3" y1="177.8" x2="307.34" y2="177.8" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="177.8" x2="307.34" y2="195.58" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="195.58" x2="241.3" y2="195.58" width="0.1524" layer="97"/>
-<text x="243.84" y="187.96" size="2.54" layer="97">GPS Reciever GP-735 (56 Channel)
+<wire x1="248.92" y1="195.58" x2="248.92" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="248.92" y1="177.8" x2="314.96" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="314.96" y1="177.8" x2="314.96" y2="195.58" width="0.1524" layer="97"/>
+<wire x1="314.96" y1="195.58" x2="248.92" y2="195.58" width="0.1524" layer="97"/>
+<text x="251.46" y="187.96" size="2.54" layer="97">GPS Reciever GP-735 (56 Channel)
 SparkFun GPS-13670</text>
-<wire x1="241.3" y1="167.64" x2="241.3" y2="139.7" width="0.1524" layer="97"/>
-<wire x1="241.3" y1="139.7" x2="307.34" y2="139.7" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="139.7" x2="307.34" y2="167.64" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="167.64" x2="241.3" y2="167.64" width="0.1524" layer="97"/>
-<text x="243.84" y="160.02" size="2.54" layer="97">20x4 LCD
+<wire x1="248.92" y1="170.18" x2="248.92" y2="142.24" width="0.1524" layer="97"/>
+<wire x1="248.92" y1="142.24" x2="314.96" y2="142.24" width="0.1524" layer="97"/>
+<wire x1="314.96" y1="142.24" x2="314.96" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="314.96" y1="170.18" x2="248.92" y2="170.18" width="0.1524" layer="97"/>
+<text x="251.46" y="162.56" size="2.54" layer="97">20x4 LCD
 SparkFun LCD-14074</text>
-<text x="228.6" y="160.02" size="1.27" layer="97">RX</text>
-<text x="228.6" y="157.48" size="1.27" layer="97">SDI</text>
-<text x="228.6" y="154.94" size="1.27" layer="97">SDO</text>
-<text x="228.6" y="152.4" size="1.27" layer="97">SCK</text>
-<text x="228.6" y="144.78" size="1.27" layer="97">RAW</text>
-<text x="228.6" y="142.24" size="1.27" layer="97">GND</text>
-<text x="228.6" y="193.04" size="1.27" layer="97">GND</text>
-<text x="228.6" y="190.5" size="1.27" layer="97">VCC</text>
-<text x="228.6" y="187.96" size="1.27" layer="97">TXA</text>
-<text x="228.6" y="185.42" size="1.27" layer="97">RXA</text>
-<text x="228.6" y="182.88" size="1.27" layer="97">V_BAT</text>
-<text x="228.6" y="180.34" size="1.27" layer="97">PWR_CTRL</text>
-<text x="243.84" y="180.34" size="1.27" layer="97">MUST: PWR_CTRL to be used to power down GPS module when not in use</text>
+<text x="236.22" y="152.4" size="1.27" layer="97">RX</text>
+<text x="236.22" y="149.86" size="1.27" layer="97">SDI</text>
+<text x="236.22" y="147.32" size="1.27" layer="97">SDO</text>
+<text x="236.22" y="144.78" size="1.27" layer="97">SCK</text>
+<text x="236.22" y="167.64" size="1.27" layer="97">RAW</text>
+<text x="236.22" y="165.1" size="1.27" layer="97">GND</text>
+<text x="236.22" y="193.04" size="1.27" layer="97">GND</text>
+<text x="236.22" y="190.5" size="1.27" layer="97">VCC</text>
+<text x="236.22" y="187.96" size="1.27" layer="97">TXA</text>
+<text x="236.22" y="185.42" size="1.27" layer="97">RXA</text>
+<text x="236.22" y="182.88" size="1.27" layer="97">V_BAT</text>
+<text x="236.22" y="180.34" size="1.27" layer="97">PWR_CTRL</text>
+<text x="251.46" y="180.34" size="1.27" layer="97">MUST: PWR_CTRL to be used to power down GPS module when not in use</text>
 <wire x1="132.08" y1="121.92" x2="132.08" y2="20.32" width="0.1524" layer="97"/>
 <wire x1="132.08" y1="20.32" x2="246.38" y2="20.32" width="0.1524" layer="97"/>
 <wire x1="246.38" y1="20.32" x2="246.38" y2="121.92" width="0.1524" layer="97"/>
@@ -17367,10 +17367,6 @@ SparkFun LCD-14074</text>
 <instance part="C15" gate="G$1" x="320.04" y="73.66" smashed="yes" rot="MR0">
 <attribute name="NAME" x="320.548" y="74.803" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="320.548" y="71.501" size="1.778" layer="96" font="vector" rot="MR180"/>
-</instance>
-<instance part="JP2" gate="G$1" x="226.06" y="160.02" smashed="yes" rot="MR0">
-<attribute name="NAME" x="225.044" y="152.146" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="PROD_ID" x="226.06" y="160.02" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="Y1" gate="G$1" x="147.32" y="182.88" smashed="yes" rot="R270">
 <attribute name="NAME" x="146.05" y="177.546" size="1.778" layer="95" font="vector"/>
@@ -17513,27 +17509,31 @@ SparkFun LCD-14074</text>
 <attribute name="SHEET" x="411.48" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="342.9" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="J4" gate="A" x="220.98" y="187.96" smashed="yes" rot="R180">
-<attribute name="VALUE" x="226.06" y="197.866" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="226.06" y="177.292" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J4" gate="A" x="228.6" y="187.96" smashed="yes" rot="R180">
+<attribute name="VALUE" x="243.84" y="197.866" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="233.68" y="177.292" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="226.06" y="50.8" smashed="yes">
 <attribute name="VALUE" x="225.044" y="54.356" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="213.36" y="137.16" smashed="yes">
-<attribute name="VALUE" x="210.82" y="134.62" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="215.9" y="162.56" smashed="yes">
+<attribute name="VALUE" x="213.36" y="160.02" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY8" gate="G$1" x="208.28" y="147.32" smashed="yes">
-<attribute name="VALUE" x="208.28" y="150.114" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY8" gate="G$1" x="218.44" y="170.18" smashed="yes">
+<attribute name="VALUE" x="218.44" y="172.974" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND15" gate="1" x="213.36" y="175.26" smashed="yes">
-<attribute name="VALUE" x="210.82" y="172.72" size="1.778" layer="96"/>
+<instance part="GND15" gate="1" x="205.74" y="175.26" smashed="yes">
+<attribute name="VALUE" x="203.2" y="172.72" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="G$1" x="210.82" y="200.66" smashed="yes">
-<attribute name="VALUE" x="210.82" y="203.454" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY10" gate="G$1" x="203.2" y="200.66" smashed="yes">
+<attribute name="VALUE" x="203.2" y="203.454" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="U$10" gate="G$1" x="335.28" y="114.3" smashed="yes">
 <attribute name="VALUE" x="334.264" y="117.856" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="JP1" gate="G$1" x="233.68" y="162.56" smashed="yes" rot="MR0">
+<attribute name="NAME" x="232.664" y="154.686" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="PROD_ID" x="233.68" y="162.56" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 </instances>
 <busses>
@@ -17561,36 +17561,24 @@ SparkFun LCD-14074</text>
 <junction x="381" y="86.36"/>
 </segment>
 </net>
-<net name="IO8" class="0">
-<segment>
-<wire x1="215.9" y1="165.1" x2="198.12" y2="165.1" width="0.1524" layer="91"/>
-<label x="205.74" y="165.1" size="1.778" layer="95" font="vector"/>
-<pinref part="JP2" gate="G$1" pin="10"/>
-<pinref part="U4" gate="U$1" pin="PB0(ICP)"/>
-</segment>
-</net>
-<net name="IO9" class="0">
-<segment>
-<wire x1="215.9" y1="162.56" x2="198.12" y2="162.56" width="0.1524" layer="91"/>
-<label x="205.74" y="162.56" size="1.778" layer="95" font="vector"/>
-<pinref part="JP2" gate="G$1" pin="9"/>
-<pinref part="U4" gate="U$1" pin="PB1(OC1A)"/>
-</segment>
-</net>
 <net name="SS" class="0">
 <segment>
-<wire x1="215.9" y1="160.02" x2="198.12" y2="160.02" width="0.1524" layer="91"/>
-<label x="205.74" y="160.02" size="1.778" layer="95" font="vector"/>
-<pinref part="JP2" gate="G$1" pin="8"/>
+<label x="210.82" y="152.4" size="1.778" layer="95" font="vector"/>
 <pinref part="U4" gate="U$1" pin="PB2(SS/OC1B)"/>
+<pinref part="JP1" gate="G$1" pin="4"/>
+<wire x1="208.28" y1="160.02" x2="198.12" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="160.02" x2="208.28" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="152.4" x2="223.52" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<wire x1="215.9" y1="157.48" x2="198.12" y2="157.48" width="0.1524" layer="91"/>
-<label x="205.74" y="157.48" size="1.778" layer="95" font="vector"/>
-<pinref part="JP2" gate="G$1" pin="7"/>
+<label x="210.82" y="149.86" size="1.778" layer="95" font="vector"/>
 <pinref part="U4" gate="U$1" pin="PB3(MOSI/OC2)"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
+<wire x1="205.74" y1="157.48" x2="198.12" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="157.48" x2="205.74" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="149.86" x2="223.52" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="119.38" y1="149.86" x2="124.46" y2="149.86" width="0.1524" layer="91"/>
@@ -17600,10 +17588,12 @@ SparkFun LCD-14074</text>
 </net>
 <net name="MISO" class="0">
 <segment>
-<wire x1="215.9" y1="154.94" x2="198.12" y2="154.94" width="0.1524" layer="91"/>
-<label x="205.74" y="154.94" size="1.778" layer="95" font="vector"/>
-<pinref part="JP2" gate="G$1" pin="6"/>
+<label x="210.82" y="147.32" size="1.778" layer="95" font="vector"/>
 <pinref part="U4" gate="U$1" pin="PB4(MISO)"/>
+<wire x1="198.12" y1="154.94" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="203.2" y1="154.94" x2="203.2" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="147.32" x2="223.52" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="101.6" y1="152.4" x2="99.06" y2="152.4" width="0.1524" layer="91"/>
@@ -17613,15 +17603,15 @@ SparkFun LCD-14074</text>
 </net>
 <net name="SCK" class="0">
 <segment>
-<wire x1="215.9" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="144.78" x2="200.66" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="144.78" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="152.4" x2="198.12" y2="152.4" width="0.1524" layer="91"/>
-<junction x="200.66" y="152.4"/>
-<label x="205.74" y="152.4" size="1.778" layer="95" font="vector"/>
+<label x="210.82" y="144.78" size="1.778" layer="95" font="vector"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="JP2" gate="G$1" pin="5"/>
 <pinref part="U4" gate="U$1" pin="PB5(SCK)"/>
+<wire x1="198.12" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="144.78" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
+<junction x="200.66" y="144.78"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="200.66" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="101.6" y1="149.86" x2="99.06" y2="149.86" width="0.1524" layer="91"/>
@@ -17821,16 +17811,16 @@ SparkFun LCD-14074</text>
 <wire x1="345.44" y1="71.12" x2="345.44" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="215.9" y1="142.24" x2="213.36" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="142.24" x2="213.36" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="167.64" x2="215.9" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="10"/>
+<wire x1="215.9" y1="167.64" x2="223.52" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="A" pin="1"/>
 <pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="215.9" y1="193.04" x2="213.36" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="193.04" x2="213.36" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="193.04" x2="205.74" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="193.04" x2="205.74" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -18064,16 +18054,16 @@ SparkFun LCD-14074</text>
 <junction x="226.06" y="48.26"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="2"/>
 <pinref part="SUPPLY8" gate="G$1" pin="VCC"/>
-<wire x1="215.9" y1="144.78" x2="208.28" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="144.78" x2="208.28" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="165.1" x2="218.44" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="9"/>
+<wire x1="218.44" y1="165.1" x2="223.52" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="A" pin="2"/>
 <pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
-<wire x1="215.9" y1="190.5" x2="210.82" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="190.5" x2="210.82" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="190.5" x2="203.2" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="190.5" x2="203.2" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -18112,10 +18102,10 @@ SparkFun LCD-14074</text>
 <net name="N$7" class="0">
 <segment>
 <pinref part="U4" gate="U$1" pin="PD2(INT0)"/>
-<wire x1="198.12" y1="182.88" x2="208.28" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="182.88" x2="200.66" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="J4" gate="A" pin="3"/>
-<wire x1="208.28" y1="182.88" x2="208.28" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="187.96" x2="215.9" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="182.88" x2="200.66" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="187.96" x2="223.52" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
