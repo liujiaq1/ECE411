@@ -1,5 +1,5 @@
 "Qty";"Value";"Device";"Package";"Parts";"Description";"MANUFACTURER_PART_NUMBER";"PROD_ID";"SF_ID";"VALUE";"VENDOR";
-"7";"0.1uF";"0.1UF-0603-25V-(+80/-20%)";"0603";"C1, C2, C4, C8, C10, C12, C18";"0.1µF ceramic capacitors";"";"CAP-00810";"";"0.1uF";"";
+"10";"0.1uF";"0.1UF-0603-25V-(+80/-20%)";"0603";"C1, C2, C4, C8, C9, C10, C11, C12, C13, C18";"0.1µF ceramic capacitors";"";"CAP-00810";"";"0.1uF";"";
 "1";"1.0uF";"1.0UF-16V-10%(0603)";"0603-CAP";"C16";"CAP-00868";"";"CAP-00868";"";"1.0uF";"";
 "3";"10k";"10KOHM-0603-1/10W-1%";"0603";"R2, R3, R4";"10kΩ resistor";"";"RES-00824";"";"10k";"";
 "1";"10nF";"10NF/10000PF-50V-10%(0603)";"0603-CAP";"C17";"CAP-00867";"";"CAP-00867";"";"10nF";"";
@@ -24,6 +24,7 @@
 "1";"GREEN";"LED-GREEN_HIDDENSILK";"LED-1206-HIDDENSILK";"LED2";"Green SMD LED";"";"DIO-09910";"";"";"";
 "1";"ISP";"AVR_SPI_PROG_3X2SMD";"2X3_SMT_POSTS";"J2";"AVR ISP 6 Pin";"";"CONN-11415";"";"";"";
 "4";"JUMPER-SMT_2_NC_TRACE_NO-SILK";"JUMPER-SMT_2_NC_TRACE_NO-SILK";"SMT-JUMPER_2_NC_TRACE_NO-SILK";"JP2, JP3, JP4, JP5";"Normally closed trace jumper";"";"";"";"";"";
+"1";"JUMPER-SMT_3_1-NC_TRACE_NO-SILK";"JUMPER-SMT_3_1-NC_TRACE_NO-SILK";"SMT-JUMPER_3_1-NC_TRACE_NO-SILK";"JP6";"Normally closed trace jumper (1 of 2 connections)";"";"";"";"";"";
 "1";"LIGHT_SENSORALS";"LIGHT_SENSORALS";"ALS-PT19";"U2";"Ambient Light Sensors - Phototransistors";"";"IC-11836";"SEN-12566";"";"";
 "1";"LM1117";"V_REG_LM1117ALT1";"SOT223-ALT1";"IC3";"Voltage Regulator LM1117";"";"VREG-08170";"";"";"";
 "1";"M10SMD_COMBO";"M10SMD_COMBO";"1X10_SMD_COMBINED";"JP1";"Header 10";"";"CONN-11219";"";"";"";

@@ -28,17 +28,17 @@
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="29" name="tStop" color="2" fill="3" visible="no" active="no"/>
-<layer number="30" name="bStop" color="5" fill="6" visible="no" active="no"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="no"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="no"/>
@@ -57,9 +57,9 @@
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="13" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
 <layer number="50" name="dxf" color="12" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
@@ -12649,31 +12649,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="VCC">
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -16717,13 +16698,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="VIN" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
-<symbol name="VCC">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="5V" prefix="SUPPLY">
@@ -16745,20 +16719,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic voltage input supply symbol.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="VIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -18001,6 +17961,42 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="-0.1905" y="-0.127"/>
 </polygon>
 </package>
+<package name="SMT-JUMPER_3_1-NC_TRACE_SILK" urn="urn:adsk.eagle:footprint:39266/1" library_version="1">
+<wire x1="1.27" y1="-1.016" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.016" x2="1.7272" y2="0.5588" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.7272" y1="0.5588" x2="-1.27" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.7272" y1="-0.5588" x2="-1.27" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.27" y1="-1.016" x2="1.7272" y2="-0.5588" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.7272" y1="-0.5588" x2="1.7272" y2="0.5588" width="0.1524" layer="21"/>
+<wire x1="-1.7272" y1="-0.5588" x2="-1.7272" y2="0.5588" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.016" x2="1.27" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="0" y1="0" x2="1.016" y2="0" width="0.254" layer="1"/>
+<smd name="1" x="-1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="3" x="1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<polygon width="0.127" layer="29">
+<vertex x="0.3175" y="0.127"/>
+<vertex x="0.6985" y="0.127"/>
+<vertex x="0.6985" y="-0.127"/>
+<vertex x="0.3175" y="-0.127"/>
+</polygon>
+</package>
+<package name="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" urn="urn:adsk.eagle:footprint:39267/1" library_version="1">
+<smd name="1" x="-1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="3" x="1.016" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="0" y1="0" x2="1.016" y2="0" width="0.254" layer="1"/>
+<polygon width="0.127" layer="29">
+<vertex x="0.3175" y="0.127"/>
+<vertex x="0.6985" y="0.127"/>
+<vertex x="0.6985" y="-0.127"/>
+<vertex x="0.3175" y="-0.127"/>
+</polygon>
+</package>
 </packages>
 <packages3d>
 <package3d name="SMT-JUMPER_2_NC_TRACE_NO-SILK" urn="urn:adsk.eagle:package:39286/1" type="box" library_version="1">
@@ -18011,6 +18007,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package3d name="SMT-JUMPER_2_NC_TRACE_SILK" urn="urn:adsk.eagle:package:39281/1" type="box" library_version="1">
 <packageinstances>
 <packageinstance name="SMT-JUMPER_2_NC_TRACE_SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="SMT-JUMPER_3_1-NC_TRACE_SILK" urn="urn:adsk.eagle:package:39288/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_3_1-NC_TRACE_SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="SMT-JUMPER_3_1-NC_TRACE_NO-SILK" urn="urn:adsk.eagle:package:39287/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_3_1-NC_TRACE_NO-SILK"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -18026,6 +18032,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-2.54" y="-2.54" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="SMT-JUMPER_3_1-NC_TRACE" urn="urn:adsk.eagle:symbol:39265/1" library_version="1">
+<wire x1="-0.635" y1="-1.397" x2="0.635" y2="-1.397" width="1.27" layer="94" curve="180" cap="flat"/>
+<wire x1="-0.635" y1="1.397" x2="0.635" y2="1.397" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="1.27" y1="-0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<text x="2.54" y="0.381" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="2.54" y="-0.381" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<rectangle x1="-1.27" y1="-0.635" x2="1.27" y2="0.635" layer="94"/>
+<pin name="3" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -18062,6 +18085,89 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:39281/1"/>
 </package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JUMPER-SMT_3_1-NC_TRACE" urn="urn:adsk.eagle:component:39298/1" prefix="JP" library_version="1">
+<description>&lt;h3&gt;Normally closed trace jumper (1 of 2 connections)&lt;/h3&gt;
+&lt;p&gt;This jumper has a trace between two pads so it's normally closed (NC). The other connection is normally open (NO). Use a razor knife to open the connection. For best results follow the IPC guidelines for cutting traces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cutout at least 0.063 mm (0.005 in).&lt;/li&gt;
+&lt;li&gt;Remove all loose material to clean up the cut area.&lt;/li&gt;
+&lt;li&gt;Seal the cut with an approved epoxy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reapply solder to reclose the connection, or to close the NO connection.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="SMT-JUMPER_3_1-NC_TRACE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SILK" package="SMT-JUMPER_3_1-NC_TRACE_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39288/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_NO-SILK" package="SMT-JUMPER_3_1-NC_TRACE_NO-SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39287/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-PowerSymbols" urn="urn:adsk.eagle:library:530">
+<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
+This library contains power, ground, and voltage-supply symbols.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="3.3V" urn="urn:adsk.eagle:symbol:39411/1" library_version="1">
+<description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="3.3V" urn="urn:adsk.eagle:component:39435/1" prefix="SUPPLY" library_version="1">
+<description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -18152,31 +18258,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="D3" library="SparkFun-LED" deviceset="LED-YELLOW" device="_HIDDENSILK" value="Yellow"/>
 <part name="R12" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
 <part name="C18" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="R16" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="USB_MICRO-B" device="_HALF_PTH_MILL" value="AMP FCI 10103594-0001LF"/>
 <part name="LED5" library="SparkFun-LED" deviceset="LED-GREEN" device="_HIDDENSILK" value="GREEN"/>
-<part name="SUPPLY14" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="SUPPLY13" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="SUPPLY17" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="SUPPLY18" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
 <part name="U1" library="SparkFun-IC-Comms" deviceset="CH340C" device=""/>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device="" value="Team 9"/>
 <part name="J4" library="SparkFun-Connectors" deviceset="JST_6_PIN_HORIZONTAL" device="" value="BM06B-SRSS-TB"/>
-<part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
-<part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="VCC" device=""/>
-<part name="U$10" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M10" device="SMD_COMBO">
 <attribute name="PROD_ID" value="CONN-11219"/>
 </part>
 <part name="U2" library="SparkFun-Sensors" library_urn="urn:adsk.eagle:library:534" deviceset="LIGHT_SENSOR" device="ALS" package3d_urn="urn:adsk.eagle:package:39950/1"/>
-<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND16" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND17" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U5" library="TE 1571984-1" deviceset="1571984-1" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -18189,6 +18283,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP3" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39286/1"/>
 <part name="JP4" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39286/1"/>
 <part name="JP5" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39286/1"/>
+<part name="C9" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="GND22" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="JP6" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39287/1"/>
+<part name="U$1" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
+<part name="C11" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="C13" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="GND23" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND26" library="SparkFun" deviceset="GND" device=""/>
+<part name="SUPPLY11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY13" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY15" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY16" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY20" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY21" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY10" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY14" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY23" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18198,13 +18313,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="258.064" y="225.552" size="1.778" layer="97" font="vector">VIN Range: 7-15V</text>
 <text x="368.3" y="170.18" size="1.778" layer="97" font="vector">3.3V
 600mA Out</text>
-<text x="20.32" y="167.64" size="2.54" layer="97">Should: Ambient Light Detect Circuit</text>
+<text x="20.32" y="162.56" size="2.54" layer="97">Should: Ambient Light Detect Circuit</text>
 <text x="109.22" y="259.08" size="12.7" layer="97">Team 9: GPS Enabled Clock</text>
 <text x="12.7" y="2.54" size="5.08" layer="97">Based on SparkFun's RedBoard Qwiic board. Does this require posting SparkFun's license?</text>
-<wire x1="91.44" y1="119.38" x2="17.78" y2="119.38" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="119.38" x2="17.78" y2="172.72" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="172.72" x2="91.44" y2="172.72" width="0.1524" layer="97"/>
-<wire x1="91.44" y1="172.72" x2="91.44" y2="119.38" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="114.3" x2="17.78" y2="114.3" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="114.3" x2="17.78" y2="167.64" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="167.64" x2="91.44" y2="167.64" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="167.64" x2="91.44" y2="114.3" width="0.1524" layer="97"/>
 <wire x1="83.82" y1="27.94" x2="83.82" y2="45.72" width="0.1524" layer="97"/>
 <wire x1="83.82" y1="45.72" x2="17.78" y2="45.72" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="45.72" x2="17.78" y2="27.94" width="0.1524" layer="97"/>
@@ -18234,16 +18349,16 @@ SparkFun LCD-14074</text>
 <wire x1="254" y1="160.02" x2="411.48" y2="160.02" width="0.1524" layer="97"/>
 <wire x1="411.48" y1="160.02" x2="411.48" y2="251.46" width="0.1524" layer="97"/>
 <wire x1="411.48" y1="251.46" x2="254" y2="251.46" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="251.46" x2="17.78" y2="185.42" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="185.42" x2="144.78" y2="185.42" width="0.1524" layer="97"/>
-<wire x1="144.78" y1="185.42" x2="144.78" y2="251.46" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="251.46" x2="17.78" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="177.8" x2="144.78" y2="177.8" width="0.1524" layer="97"/>
+<wire x1="144.78" y1="177.8" x2="144.78" y2="251.46" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="251.46" x2="144.78" y2="251.46" width="0.1524" layer="97"/>
-<text x="330.2" y="25.4" size="5.08" layer="97">Does this block auto update?</text>
+<text x="330.2" y="25.4" size="3.81" layer="97">Team 9: Cheng, Jemmett, Jia, Liu</text>
 <wire x1="17.78" y1="104.14" x2="91.44" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="58.42" x2="17.78" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="91.44" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="97"/>
 <wire x1="91.44" y1="104.14" x2="91.44" y2="58.42" width="0.1524" layer="97"/>
-<text x="20.32" y="99.06" size="2.54" layer="97">Daylight Savings Time</text>
+<text x="20.32" y="99.06" size="2.54" layer="97">Daylight Savings Time Switch</text>
 </plain>
 <instances>
 <instance part="GND1" gate="1" x="231.14" y="27.94" smashed="yes">
@@ -18336,8 +18451,8 @@ SparkFun LCD-14074</text>
 <attribute name="NAME" x="51.308" y="202.946" size="1.778" layer="95" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="46.482" y="198.374" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND24" gate="1" x="45.72" y="193.04" smashed="yes">
-<attribute name="VALUE" x="43.18" y="190.5" size="1.778" layer="96"/>
+<instance part="GND24" gate="1" x="45.72" y="187.96" smashed="yes">
+<attribute name="VALUE" x="43.18" y="185.42" size="1.778" layer="96"/>
 </instance>
 <instance part="IC3" gate="G$1" x="304.8" y="220.98" smashed="yes">
 <attribute name="NAME" x="307.34" y="213.36" size="1.778" layer="95" font="vector"/>
@@ -18378,11 +18493,11 @@ SparkFun LCD-14074</text>
 <instance part="GND14" gate="1" x="398.78" y="177.8" smashed="yes">
 <attribute name="VALUE" x="396.24" y="175.26" size="1.778" layer="96"/>
 </instance>
-<instance part="GND10" gate="1" x="68.58" y="193.04" smashed="yes">
-<attribute name="VALUE" x="66.04" y="190.5" size="1.778" layer="96"/>
+<instance part="GND10" gate="1" x="68.58" y="187.96" smashed="yes">
+<attribute name="VALUE" x="66.04" y="185.42" size="1.778" layer="96"/>
 </instance>
-<instance part="GND20" gate="1" x="63.5" y="193.04" smashed="yes">
-<attribute name="VALUE" x="60.96" y="190.5" size="1.778" layer="96"/>
+<instance part="GND20" gate="1" x="63.5" y="187.96" smashed="yes">
+<attribute name="VALUE" x="60.96" y="185.42" size="1.778" layer="96"/>
 </instance>
 <instance part="LED2" gate="G$1" x="345.44" y="205.74" smashed="yes">
 <attribute name="PROD_ID" x="345.44" y="205.74" size="1.778" layer="96" display="off"/>
@@ -18433,21 +18548,21 @@ SparkFun LCD-14074</text>
 <instance part="U$7" gate="G$1" x="363.22" y="208.28" smashed="yes">
 <attribute name="VALUE" x="363.22" y="211.074" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND18" gate="1" x="83.82" y="226.06" smashed="yes">
-<attribute name="VALUE" x="81.28" y="223.52" size="1.778" layer="96"/>
+<instance part="GND18" gate="1" x="83.82" y="223.52" smashed="yes">
+<attribute name="VALUE" x="81.28" y="220.98" size="1.778" layer="96"/>
 </instance>
-<instance part="GND29" gate="1" x="33.02" y="193.04" smashed="yes">
-<attribute name="VALUE" x="30.48" y="190.5" size="1.778" layer="96"/>
+<instance part="GND29" gate="1" x="33.02" y="187.96" smashed="yes">
+<attribute name="VALUE" x="30.48" y="185.42" size="1.778" layer="96"/>
 </instance>
-<instance part="GND31" gate="1" x="93.98" y="193.04" smashed="yes">
-<attribute name="VALUE" x="91.44" y="190.5" size="1.778" layer="96"/>
+<instance part="GND31" gate="1" x="93.98" y="187.96" smashed="yes">
+<attribute name="VALUE" x="91.44" y="185.42" size="1.778" layer="96"/>
 </instance>
 <instance part="C17" gate="G$1" x="86.36" y="200.66" smashed="yes">
 <attribute name="NAME" x="87.122" y="198.882" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="86.868" y="196.596" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND32" gate="1" x="86.36" y="193.04" smashed="yes">
-<attribute name="VALUE" x="83.82" y="190.5" size="1.778" layer="96"/>
+<instance part="GND32" gate="1" x="86.36" y="187.96" smashed="yes">
+<attribute name="VALUE" x="83.82" y="185.42" size="1.778" layer="96"/>
 </instance>
 <instance part="D3" gate="G$1" x="119.38" y="226.06" smashed="yes">
 <attribute name="NAME" x="115.951" y="221.488" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -18457,15 +18572,9 @@ SparkFun LCD-14074</text>
 <attribute name="NAME" x="117.856" y="236.22" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="120.904" y="236.22" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="C18" gate="G$1" x="83.82" y="233.68" smashed="yes">
-<attribute name="NAME" x="85.344" y="236.601" size="1.778" layer="95"/>
-<attribute name="VALUE" x="85.344" y="231.521" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY4" gate="G$1" x="119.38" y="243.84" smashed="yes">
-<attribute name="VALUE" x="118.364" y="247.396" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY9" gate="G$1" x="129.54" y="243.84" smashed="yes">
-<attribute name="VALUE" x="128.524" y="247.396" size="1.778" layer="96"/>
+<instance part="C18" gate="G$1" x="83.82" y="231.14" smashed="yes">
+<attribute name="NAME" x="85.344" y="234.061" size="1.778" layer="95"/>
+<attribute name="VALUE" x="85.344" y="228.981" size="1.778" layer="96"/>
 </instance>
 <instance part="R16" gate="G$1" x="129.54" y="236.22" smashed="yes" rot="R90">
 <attribute name="NAME" x="128.016" y="236.22" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -18478,21 +18587,6 @@ SparkFun LCD-14074</text>
 <attribute name="PROD_ID" x="129.54" y="226.06" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="126.111" y="221.488" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="131.445" y="221.488" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="SUPPLY14" gate="G$1" x="231.14" y="40.64" smashed="yes">
-<attribute name="VALUE" x="231.14" y="43.434" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY13" gate="G$1" x="193.04" y="139.7" smashed="yes">
-<attribute name="VALUE" x="193.04" y="142.494" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY15" gate="G$1" x="175.26" y="152.4" smashed="yes">
-<attribute name="VALUE" x="175.26" y="155.194" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY17" gate="G$1" x="182.88" y="91.44" smashed="yes">
-<attribute name="VALUE" x="182.88" y="94.234" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY18" gate="G$1" x="345.44" y="223.52" smashed="yes">
-<attribute name="VALUE" x="345.44" y="226.314" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="U1" gate="U1" x="106.68" y="210.82" smashed="yes">
 <attribute name="NAME" x="99.06" y="221.615" size="1.778" layer="95"/>
@@ -18508,37 +18602,22 @@ SparkFun LCD-14074</text>
 <attribute name="VALUE" x="88.9" y="25.654" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="99.06" y="46.228" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY2" gate="G$1" x="398.78" y="208.28" smashed="yes">
-<attribute name="VALUE" x="397.764" y="211.836" size="1.778" layer="96"/>
-</instance>
 <instance part="GND2" gate="1" x="309.88" y="96.52" smashed="yes">
 <attribute name="VALUE" x="307.34" y="93.98" size="1.778" layer="96"/>
 </instance>
 <instance part="GND15" gate="1" x="121.92" y="25.4" smashed="yes">
 <attribute name="VALUE" x="119.38" y="22.86" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="G$1" x="121.92" y="50.8" smashed="yes">
-<attribute name="VALUE" x="121.92" y="53.594" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="U$10" gate="G$1" x="83.82" y="243.84" smashed="yes">
-<attribute name="VALUE" x="82.804" y="247.396" size="1.778" layer="96" font="vector"/>
-</instance>
 <instance part="JP1" gate="G$1" x="327.66" y="96.52" smashed="yes" rot="MR0">
 <attribute name="NAME" x="326.644" y="88.646" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="PROD_ID" x="327.66" y="96.52" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
-<instance part="U2" gate="G$1" x="48.26" y="137.16" smashed="yes">
-<attribute name="NAME" x="51.308" y="137.668" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="51.308" y="136.652" size="1.778" layer="96" font="vector" align="top-left"/>
+<instance part="U2" gate="G$1" x="48.26" y="132.08" smashed="yes">
+<attribute name="NAME" x="51.308" y="132.588" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="51.308" y="131.572" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="50.8" y="157.48" smashed="yes">
-<attribute name="VALUE" x="49.784" y="161.036" size="1.778" layer="96"/>
-</instance>
-<instance part="GND16" gate="1" x="50.8" y="127" smashed="yes">
-<attribute name="VALUE" x="48.26" y="124.46" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY3" gate="G$1" x="76.2" y="96.52" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="77.216" y="100.076" size="1.778" layer="96" rot="MR0"/>
+<instance part="GND16" gate="1" x="50.8" y="121.92" smashed="yes">
+<attribute name="VALUE" x="48.26" y="119.38" size="1.778" layer="96"/>
 </instance>
 <instance part="GND17" gate="1" x="76.2" y="71.12" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="78.74" y="68.58" size="1.778" layer="96" rot="MR0"/>
@@ -18550,9 +18629,9 @@ SparkFun LCD-14074</text>
 <instance part="GND19" gate="1" x="27.94" y="71.12" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="30.48" y="68.58" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="R7" gate="G$1" x="50.8" y="152.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="49.276" y="152.4" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="52.324" y="152.4" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R7" gate="G$1" x="50.8" y="147.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.276" y="147.32" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="52.324" y="147.32" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="R8" gate="G$1" x="76.2" y="88.9" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.676" y="88.9" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -18582,6 +18661,73 @@ SparkFun LCD-14074</text>
 <instance part="JP5" gate="G$1" x="121.92" y="43.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="119.38" y="40.64" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="124.46" y="40.64" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
+<instance part="C9" gate="G$1" x="38.1" y="195.58" smashed="yes" rot="MR0">
+<attribute name="NAME" x="43.688" y="197.866" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="38.862" y="193.294" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND22" gate="1" x="38.1" y="187.96" smashed="yes">
+<attribute name="VALUE" x="35.56" y="185.42" size="1.778" layer="96"/>
+</instance>
+<instance part="JP6" gate="G$1" x="78.74" y="238.76" smashed="yes" rot="MR0">
+<attribute name="NAME" x="76.2" y="239.141" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="76.2" y="238.379" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
+</instance>
+<instance part="U$1" gate="G$1" x="78.74" y="243.84" smashed="yes">
+<attribute name="VALUE" x="77.724" y="247.396" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="C11" gate="G$1" x="172.72" y="86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="171.196" y="83.439" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="171.196" y="88.519" size="1.778" layer="96" font="vector" rot="R180"/>
+</instance>
+<instance part="C13" gate="G$1" x="162.56" y="86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="161.036" y="83.439" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="161.036" y="88.519" size="1.778" layer="96" font="vector" rot="R180"/>
+</instance>
+<instance part="GND23" gate="1" x="172.72" y="76.2" smashed="yes">
+<attribute name="VALUE" x="170.18" y="73.66" size="1.778" layer="96"/>
+</instance>
+<instance part="GND26" gate="1" x="162.56" y="76.2" smashed="yes">
+<attribute name="VALUE" x="160.02" y="73.66" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY11" gate="G$1" x="193.04" y="139.7" smashed="yes">
+<attribute name="VALUE" x="193.04" y="142.494" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY12" gate="G$1" x="175.26" y="152.4" smashed="yes">
+<attribute name="VALUE" x="175.26" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY13" gate="G$1" x="121.92" y="50.8" smashed="yes">
+<attribute name="VALUE" x="121.92" y="53.594" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY15" gate="G$1" x="231.14" y="40.64" smashed="yes">
+<attribute name="VALUE" x="231.14" y="43.434" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY16" gate="G$1" x="76.2" y="96.52" smashed="yes">
+<attribute name="VALUE" x="76.2" y="99.314" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY19" gate="G$1" x="50.8" y="152.4" smashed="yes">
+<attribute name="VALUE" x="50.8" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY20" gate="G$1" x="119.38" y="243.84" smashed="yes">
+<attribute name="VALUE" x="119.38" y="246.634" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY21" gate="G$1" x="129.54" y="243.84" smashed="yes">
+<attribute name="VALUE" x="129.54" y="246.634" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY22" gate="G$1" x="398.78" y="208.28" smashed="yes">
+<attribute name="VALUE" x="398.78" y="211.074" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY10" gate="G$1" x="172.72" y="91.44" smashed="yes">
+<attribute name="VALUE" x="172.72" y="94.234" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY14" gate="G$1" x="182.88" y="91.44" smashed="yes">
+<attribute name="VALUE" x="182.88" y="94.234" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY23" gate="G$1" x="162.56" y="91.44" smashed="yes">
+<attribute name="VALUE" x="162.56" y="94.234" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY1" gate="G$1" x="345.44" y="223.52" smashed="yes">
+<attribute name="VALUE" x="345.44" y="226.314" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -18720,20 +18866,13 @@ SparkFun LCD-14074</text>
 <junction x="330.2" y="220.98"/>
 </segment>
 <segment>
-<pinref part="C18" gate="G$1" pin="1"/>
-<wire x1="83.82" y1="238.76" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="243.84" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U1" pin="VCC"/>
-<wire x1="96.52" y1="218.44" x2="91.44" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="218.44" x2="91.44" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="241.3" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
-<junction x="83.82" y="241.3"/>
-<pinref part="U$10" gate="G$1" pin="5V"/>
-</segment>
-<segment>
 <pinref part="JP2" gate="G$1" pin="2"/>
 <pinref part="U$7" gate="G$1" pin="5V"/>
 <wire x1="363.22" y1="205.74" x2="363.22" y2="208.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="5V"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -18808,9 +18947,9 @@ SparkFun LCD-14074</text>
 <pinref part="C5" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<wire x1="45.72" y1="195.58" x2="45.72" y2="198.12" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="45.72" y1="190.5" x2="45.72" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="269.24" y1="71.12" x2="274.32" y2="71.12" width="0.1524" layer="91"/>
@@ -18831,12 +18970,12 @@ SparkFun LCD-14074</text>
 <segment>
 <pinref part="C15" gate="G$1" pin="-"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="68.58" y1="195.58" x2="68.58" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="190.5" x2="68.58" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C12" gate="G$1" pin="2"/>
 <pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="63.5" y1="195.58" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="190.5" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C16" gate="G$1" pin="2"/>
@@ -18850,26 +18989,26 @@ SparkFun LCD-14074</text>
 <pinref part="GND30" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="231.14" x2="83.82" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="228.6" x2="83.82" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <pinref part="C18" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="30.48" y1="203.2" x2="33.02" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="203.2" x2="33.02" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="203.2" x2="33.02" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 <pinref part="J1" gate="J1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
 <pinref part="GND32" gate="1" pin="GND"/>
-<wire x1="86.36" y1="195.58" x2="86.36" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="190.5" x2="86.36" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="GND"/>
 <wire x1="96.52" y1="200.66" x2="93.98" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="GND31" gate="1" pin="GND"/>
-<wire x1="93.98" y1="200.66" x2="93.98" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="200.66" x2="93.98" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -18902,12 +19041,27 @@ SparkFun LCD-14074</text>
 <segment>
 <pinref part="U2" gate="G$1" pin="E1"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<wire x1="50.8" y1="129.54" x2="50.8" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="124.46" x2="50.8" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND21" gate="1" pin="GND"/>
 <pinref part="TP1" gate="G$1" pin="1"/>
 <wire x1="345.44" y1="177.8" x2="345.44" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C9" gate="G$1" pin="2"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="38.1" y1="193.04" x2="38.1" y2="190.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND26" gate="1" pin="GND"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="78.74" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND23" gate="1" pin="GND"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="172.72" y1="78.74" x2="172.72" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -18999,6 +19153,12 @@ SparkFun LCD-14074</text>
 <wire x1="68.58" y1="215.9" x2="71.12" y2="215.9" width="0.1524" layer="91"/>
 <junction x="68.58" y="215.9"/>
 </segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="3"/>
+<wire x1="78.74" y1="233.68" x2="78.74" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="231.14" x2="73.66" y2="231.14" width="0.1524" layer="91"/>
+<label x="73.66" y="231.14" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="VUSB" class="0">
 <segment>
@@ -19085,26 +19245,26 @@ SparkFun LCD-14074</text>
 <pinref part="R12" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="VCC" class="0">
+<net name="3.3V" class="1">
 <segment>
 <wire x1="119.38" y1="243.84" x2="119.38" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="2"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY20" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="129.54" y1="243.84" x2="129.54" y2="241.3" width="0.1524" layer="91"/>
-<pinref part="SUPPLY9" gate="G$1" pin="VCC"/>
 <pinref part="R16" gate="G$1" pin="2"/>
+<pinref part="SUPPLY21" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="345.44" y1="223.52" x2="345.44" y2="220.98" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="SUPPLY18" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="182.88" y1="91.44" x2="182.88" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="SUPPLY17" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY14" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="195.58" y1="132.08" x2="193.04" y2="132.08" width="0.1524" layer="91"/>
@@ -19118,37 +19278,47 @@ SparkFun LCD-14074</text>
 <pinref part="U4" gate="U$1" pin="VCC@4"/>
 <pinref part="U4" gate="U$1" pin="VCC@6"/>
 <pinref part="U4" gate="U$1" pin="AVCC"/>
-<pinref part="SUPPLY13" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY11" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="175.26" y1="152.4" x2="175.26" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="SUPPLY15" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <wire x1="228.6" y1="38.1" x2="231.14" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="38.1" x2="231.14" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="2"/>
-<pinref part="SUPPLY14" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY15" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
 <wire x1="76.2" y1="96.52" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="SUPPLY16" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
-<pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 <wire x1="398.78" y1="205.74" x2="398.78" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="SUPPLY22" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="G$1" pin="2"/>
-<pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
 <wire x1="121.92" y1="48.26" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="SUPPLY13" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="172.72" y1="88.9" x2="172.72" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SUPPLY10" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="88.9" x2="162.56" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SUPPLY23" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="SUPPLY19" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -19171,9 +19341,9 @@ SparkFun LCD-14074</text>
 </net>
 <net name="SHLD" class="0">
 <segment>
-<wire x1="30.48" y1="200.66" x2="35.56" y2="200.66" width="0.1524" layer="91"/>
-<label x="35.56" y="200.66" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="30.48" y1="200.66" x2="38.1" y2="200.66" width="0.1524" layer="91"/>
 <pinref part="J1" gate="J1" pin="SHIELD"/>
+<pinref part="C9" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -19199,11 +19369,11 @@ SparkFun LCD-14074</text>
 <net name="AMBIENT" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="C1"/>
-<wire x1="50.8" y1="142.24" x2="50.8" y2="144.78" width="0.1524" layer="91"/>
-<label x="60.96" y="144.78" size="1.27" layer="95" xref="yes"/>
-<wire x1="50.8" y1="144.78" x2="50.8" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="144.78" x2="60.96" y2="144.78" width="0.1524" layer="91"/>
-<junction x="50.8" y="144.78"/>
+<wire x1="50.8" y1="137.16" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
+<label x="60.96" y="139.7" size="1.27" layer="95" xref="yes"/>
+<wire x1="50.8" y1="139.7" x2="50.8" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="139.7" x2="60.96" y2="139.7" width="0.1524" layer="91"/>
+<junction x="50.8" y="139.7"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -19272,9 +19442,34 @@ SparkFun LCD-14074</text>
 <wire x1="121.92" y1="33.02" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="236.22" x2="83.82" y2="238.76" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U1" pin="VCC"/>
+<wire x1="96.52" y1="218.44" x2="91.44" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="218.44" x2="91.44" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="238.76" x2="83.82" y2="238.76" width="0.1524" layer="91"/>
+<junction x="83.82" y="238.76"/>
+<pinref part="JP6" gate="G$1" pin="2"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,383.54,182.88,U3,NC,,,,"/>
+<approved hash="104,1,30.48,213.36,J1,VBUS,VUSB,,,"/>
+<approved hash="206,1,312.42,220.98,5V,,,,,"/>
+<approved hash="206,1,312.42,218.44,5V,,,,,"/>
+<approved hash="208,1,279.4,195.58,5V,sup,,,,"/>
+<approved hash="208,1,297.18,172.72,5V,sup,,,,"/>
+<approved hash="208,1,330.2,223.52,5V,sup,,,,"/>
+<approved hash="208,1,312.42,220.98,5V,out,,,,"/>
+<approved hash="208,1,312.42,218.44,5V,out,,,,"/>
+<approved hash="208,1,363.22,208.28,5V,sup,,,,"/>
+<approved hash="208,1,78.74,243.84,5V,sup,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
