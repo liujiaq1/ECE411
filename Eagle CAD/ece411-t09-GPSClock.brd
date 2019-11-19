@@ -3890,15 +3890,15 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="43.1" y1="41.2" x2="43.7" y2="41.2" width="0.6096" layer="16"/>
 <wire x1="41.1" y1="43.2" x2="43.1" y2="41.2" width="0.6096" layer="16"/>
 <contactref element="R7" pad="2"/>
-<polygon width="0.6096" layer="1">
-<vertex x="25.5" y="11"/>
-<vertex x="25.5" y="20.8"/>
-<vertex x="20" y="26.3"/>
-<vertex x="20" y="34"/>
+<polygon width="0.254" layer="1">
+<vertex x="25" y="11"/>
+<vertex x="25" y="21.3"/>
+<vertex x="19.5" y="26.8"/>
+<vertex x="19.5" y="34"/>
 <vertex x="28" y="34"/>
 <vertex x="28" y="11"/>
 </polygon>
-<polygon width="0.6096" layer="16">
+<polygon width="0.254" layer="16">
 <vertex x="25.5" y="11"/>
 <vertex x="25.5" y="20.8"/>
 <vertex x="20" y="26.3"/>
@@ -4062,6 +4062,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </polygon>
 <wire x1="24.092" y1="12.1" x2="24.082" y2="12.09" width="0.254" layer="1"/>
 <wire x1="24.082" y1="12.09" x2="22.6801" y2="12.09" width="0.254" layer="1"/>
+<via x="23.4" y="13.2" extent="1-16" drill="0.35"/>
+<via x="23.4" y="15.3" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$8">
 <contactref element="U3" pad="3"/>
