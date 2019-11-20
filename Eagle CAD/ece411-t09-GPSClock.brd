@@ -187,6 +187,9 @@ Sensor</text>
 <text x="24.2" y="43.6" size="1.27" layer="21" align="center">RX</text>
 <text x="24.6" y="52.8" size="1.27" layer="21" align="center">SCK</text>
 <text x="7.7" y="70" size="1.016" layer="21">RESET</text>
+<text x="41.4" y="27.7" size="1.016" layer="21" align="center">ISP
+SPI 
+PROG</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
