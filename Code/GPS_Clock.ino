@@ -5,48 +5,6 @@
  Date: April 19th, 2015
  License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
  This is example code that shows how to send data over SPI to the display.
- 
- To get this code to work, attached an OpenLCD to an Arduino Uno using the following pins:
- CS (OpenLCD) to 10 (Arduino)
- SDI to 11
- SDO to 12 (optional)
- SCK to 13
- VIN to 5V
- GND to GND
-Command cheat sheet:
- ASCII / DEC / HEX
- '|'    / 124 / 0x7C - Put into setting mode
- Ctrl+c / 3 / 0x03 - Change width to 20
- Ctrl+d / 4 / 0x04 - Change width to 16
- Ctrl+e / 5 / 0x05 - Change lines to 4
- Ctrl+f / 6 / 0x06 - Change lines to 2
- Ctrl+g / 7 / 0x07 - Change lines to 1
- Ctrl+h / 8 / 0x08 - Software reset of the system
- Ctrl+i / 9 / 0x09 - Enable/disable splash screen
- Ctrl+j / 10 / 0x0A - Save currently displayed text as splash
- Ctrl+k / 11 / 0x0B - Change baud to 2400bps
- Ctrl+l / 12 / 0x0C - Change baud to 4800bps
- Ctrl+m / 13 / 0x0D - Change baud to 9600bps
- Ctrl+n / 14 / 0x0E - Change baud to 14400bps
- Ctrl+o / 15 / 0x0F - Change baud to 19200bps
- Ctrl+p / 16 / 0x10 - Change baud to 38400bps
- Ctrl+q / 17 / 0x11 - Change baud to 57600bps
- Ctrl+r / 18 / 0x12 - Change baud to 115200bps
- Ctrl+s / 19 / 0x13 - Change baud to 230400bps
- Ctrl+t / 20 / 0x14 - Change baud to 460800bps
- Ctrl+u / 21 / 0x15 - Change baud to 921600bps
- Ctrl+v / 22 / 0x16 - Change baud to 1000000bps
- Ctrl+w / 23 / 0x17 - Change baud to 1200bps
- Ctrl+x / 24 / 0x18 - Change the contrast. Follow Ctrl+x with number 0 to 255. 120 is default.
- Ctrl+y / 25 / 0x19 - Change the TWI address. Follow Ctrl+x with number 0 to 255. 114 (0x72) is default.
- Ctrl+z / 26 / 0x1A - Enable/disable ignore RX pin on startup (ignore emergency reset)
- '-'    / 45 / 0x2D - Clear display. Move cursor to home position.
-        / 128-157 / 0x80-0x9D - Set the primary backlight brightness. 128 = Off, 157 = 100%.
-        / 158-187 / 0x9E-0xBB - Set the green backlight brightness. 158 = Off, 187 = 100%.
-        / 188-217 / 0xBC-0xD9 - Set the blue backlight brightness. 188 = Off, 217 = 100%.
-         For example, to change the baud rate to 115200 send 124 followed by 18.
- '+'    / 43 / 0x2B - Set Backlight to RGB value, follow + by 3 numbers 0 to 255, for the r, g and b values.
-         For example, to change the backlight to yellow send + followed by 255, 255 and 0.
 */
 
 
@@ -56,26 +14,118 @@ Command cheat sheet:
 //which you have traveled i.e westwards or eastwards of the Meridian longitude.
 
 
-#include <SPI.h> // For writing to LCD
+#include <SPI.h> // For writing to LCD & serial console
+#include <SerLCD.h>  //https://www.arduinolibraries.info/libraries/spark-fun-ser-lcd-arduino-library
 #include <SoftwareSerial.h> // For reading from GPS
+
+// initialize the library
+SerLCD lcd;
 
 SoftwareSerial GPSSerial(2,3); // RX, TX. Only RX used for recieving GPS data
 
+// make some custom characters to display signal strength:
+byte Sig1[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b10000
+};
+byte Sig2[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b01000,
+  0b11000
+};
+byte Sig3[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00100,
+  0b01100,
+  0b11100
+};
+byte Sig4[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00010,
+  0b00110,
+  0b01110,
+  0b11110
+};
+byte Sig5[8] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00001,
+  0b00011,
+  0b00111,
+  0b01111,
+  0b11111
+};
+byte Sig6[8] = {
+  0b00000,
+  0b00000,
+  0b00001,
+  0b00011,
+  0b00111,
+  0b01111,
+  0b11111,
+  0b11111
+};
+byte Sig7[8] = {
+  0b00000,
+  0b00001,
+  0b00011,
+  0b00111,
+  0b01111,
+  0b11111,
+  0b11111,
+  0b11111
+};
+byte Sig8[8] = {
+  0b00001,
+  0b00011,
+  0b00111,
+  0b01111,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111
+};
 int csPin = 10; // Declare RedBoard's Pin 10 connected to LCD's cs pin
 int GPSPin = 2; // Declare RedBoard's Pin 2 connected to GPS
+int AmbientSensor = 3; // Declare RedBoard's Pin 3 connected to Ambient Light Sensor
+int DSTSwitch = 4; // Declare RedBoard's Pin 4 connected to DTS switch
 
 int cycles = 0;
-int local_hour_offset = 8; //PST is -8 hours from UTC
+int local_hour_offset = -8; //PST is -8 hours from UTC
 
 
 
 char buffer[20]; //"Tuesday" and stuff
+char today[20];
 char time[7]; //145205 = 2:52:05
+char Longitude[3];
+char Dir[2];
 char date[7]; //123114 = Dec 31, 2014
 char sats[3]; //08 = 8 satellites in view
 byte SIV = 0; // converted # of satalites in view
+int TimeZone = 0; // converted from Longitude and Dir
 char tempString[50]; //Needs to be large enough to hold the entire string with up to 5 digits
-
+bool dark = true;
+bool DST = false;
 
 void setup() 
 {
@@ -89,34 +139,61 @@ void setup()
   
   pinMode(csPin, OUTPUT); // Declare csPin (pin 10) as output to LCD
   pinMode(GPSPin, INPUT); // Declare GPSPin (pin 2) as input from GPS
+  pinMode(AmbientSensor, INPUT); // Declare AmbientSensor (pin 3) as input from GPS
+  pinMode(DSTSwitch, INPUT); // Declare GDTSSwitch (pin 24) as input from GPS
   
-  digitalWrite(csPin, HIGH); //By default, don't be selecting OpenLCD
+  SPI.begin();
+
+  lcd.begin(SPI, csPin, SPISettings(100000, MSBFIRST, SPI_MODE0));
+
+  //Clear the display
+  lcd.clear();
   
-  SPI.begin(); //Start SPI communication
-  //SPI.beginTransaction(SPISettings(100000, MSBFIRST, SPI_MODE0));
-  SPI.setClockDivider(SPI_CLOCK_DIV128); //Slow down the master a bit
+  //Print a message to the LCD.
+  lcd.setCursor(2, 0); // set the cursor to column 2, line 0
+  lcd.print("GPS Enabled Clock");
+  lcd.setCursor(0, 1); // set the cursor to column 2, line 0
+  lcd.print("ECE 411     PSU 2019");
+  lcd.setCursor(3, 2); // set the cursor to column 2, line 0
+  lcd.print("Cheng, Jemmett,");
+  lcd.setCursor(5, 3); // set the cursor to column 2, line 0
+  lcd.print("Jia, & Liu");
+  //delay(10000);
+    lcd.saveSplash(); //Save this current text as the splash screen at next power on
 
+  lcd.enableSplash(); //This will cause the splash to be displayed at power on
 
+      //Clear the display
+  lcd.clear();
+   lcd.setBacklight(0, 80, 0); 
 
-  digitalWrite(csPin, LOW); //Drive the CS pin low to select OpenLCD
-  SPI.transfer(8);
-    SPI.transfer('|'); //Put LCD into setting mode
-    SPI.transfer('-'); //Send clear display command
-    SPI.transfer('+');
-    SPI.transfer(250);
-  digitalWrite(csPin, HIGH); //Release the CS pin to de-select OpenLCD
-  
-  spiSendString(" GPS Enabled Clock\rECE 411     PSU 2019    Cheng, Jia,\r   Jemmett, & Liu");
-  delay(5250);
-
-
-
+  // Declare the custom Signal strength characters
+  lcd.createChar(0, Sig1);
+  lcd.createChar(1, Sig2);
+  lcd.createChar(2, Sig3);
+  lcd.createChar(3, Sig4);
+  lcd.createChar(4, Sig5);
+  lcd.createChar(5, Sig6);
+  lcd.createChar(6, Sig7);
+  lcd.createChar(7, Sig8);
 }
 
 void loop() 
 {
-
-
+    // Check Ambient lighting and adjust brightness only on intial lighting change
+    // Light probably won't be strobing so no need for interupt
+    if ((dark == false) && (digitalRead(AmbientSensor)))
+    {
+      lcd.setFastBacklight(0, 250, 0); // Light went out. Turn on backlight
+      Serial.println("DARK");
+      dark = true;
+    }
+    if ((dark == true) && (!digitalRead(AmbientSensor)))
+    {
+      lcd.setFastBacklight(0, 80, 0); // Light came on. Turn off backlight
+      Serial.println("LIGHT");
+      dark = false;
+    }
   
  if(checkGPS() == true) //Checks for new serial data
   {
@@ -130,93 +207,72 @@ void loop()
 
     SIV = 0;
     crackSatellites(&SIV);
-    
+
+    TimeZone = 0; 
+
     //Convert time to local time using daylight savings if necessary
     convertToLocal(&day, &month, &year, &hour);
-    
-    //For debugging
-//    Serial.print("Date: "); 
-//    Serial.print(month); 
-//    Serial.print("/"); 
-//    Serial.print(day); 
-//    Serial.print("/"); 
-//    Serial.print(year);
-//    Serial.print(" ");
-//
-//    Serial.print("Time: "); 
-//    Serial.print(hour); 
-//    Serial.print(":"); 
-//    Serial.print(minute); 
-//    Serial.print(":"); 
-//    Serial.print(second);
-//    Serial.print(" ");
-//    
-//    Serial.print("SIV: "); 
-//    Serial.print(SIV);
-//   
-//    Serial.println();
 
-    //Update display with stuff
-    //Let's just display the time, but on 15 seconds and 45 seconds, display something else
-    if( (second == 15) || (second == 45))
-    { 
-      if(second == 15) //On every 0:15, Day of week and Go home!
-      {
-        byte DoW = day_of_week(year, month, day);
-        if(DoW == 0 || DoW == 6) //Sunday or Saturday
-        {
-          sprintf(buffer, " GoHome");
-        }
-        else //Display the day of the week
-        {
-          if(DoW == 1) sprintf(buffer, " Monday");
-          if(DoW == 2) sprintf(buffer, " Tuesday");
-          if(DoW == 3) sprintf(buffer, " Wednesday");
-          if(DoW == 4) sprintf(buffer, " Thursday");
-          if(DoW == 5) sprintf(buffer, " Friday!");
-        }
-      }
-      else if(second == 45) //On every 0:45, Date
-      {
-        sprintf(buffer, " Date: %02d/%02d/%02d", month, day, year % 100);
-      }
-
-      //spiSendString(buffer);
-      //delay(1000); //Display this message for 1 second
-    }
-    else //Just print the time
-    {
-      //Let's count down to new years!
-      //sprintf(buffer, "%02d%02d%02d", 11 - hour, 59 - minute, 59 - second);
-
-      sprintf(buffer, "%02d:%02d:%02d", hour, minute, second);
+      // Display time on row 1
+      lcd.setCursor(0, 0); // set the cursor to column 0, line 0
+      sprintf(buffer, "%02d:%02d:%02d           ", hour, minute, second);
+      lcd.print(buffer);
       
-    } 
-    sprintf(buffer, "%02d:%02d:%02d\r%02d/%02d/%02d\r# Satellite = %02d", hour, minute, second, month, day, year, SIV);
-    spiSendString(buffer);
-    delay(250);
+      if (DST)
+      {
+        lcd.setCursor(9, 0); // set the cursor to column 19, line 0
+        lcd.print("DST");
+      }
+
+      // Display Signal Strength based on the number of satellites in view
+      lcd.setCursor(19, 0); // set the cursor to column 19, line 0
+      if (SIV > 7)
+      {
+        lcd.writeChar(7);
+      }
+      else
+      {
+        lcd.writeChar(SIV-1);
+      }
+          
+      // Display Day and Date on row 2
+      lcd.setCursor(0, 1); // set the cursor to column 0, line 1
+      byte DoW = day_of_week(year, month, day);
+      if(DoW == 0) sprintf(buffer, "Sunday %02d/%02d/%02d   ", month, day, year);
+      if(DoW == 1) sprintf(buffer, "Monday %02d/%02d/%02d   ", month, day, year);
+      if(DoW == 2) sprintf(buffer, "Tuesday %02d/%02d/%02d  ", month, day, year);
+      if(DoW == 3) sprintf(buffer, "Wednesday %02d/%02d/%02d", month, day, year);
+      if(DoW == 4) sprintf(buffer, "Thursday %02d/%02d/%02d ", month, day, year);
+      if(DoW == 5) sprintf(buffer, "Friday %02d/%02d/%02d   ", month, day, year);
+      if(DoW == 6) sprintf(buffer, "Saturday");      
+      if (buffer != today)
+      {
+        lcd.print(buffer);
+        for (int i = 0; i < 20; i++) {
+          today[i] = buffer[i];
+        }
+      }
+
+      lcd.setCursor(0, 2);
+      lcd.print("                    ");
+      lcd.setCursor(0, 3);
+      lcd.print("                    ");
+      
+      delay(250); 
   }
-  
-  //Turn on stat LED if we have enough sats for a lock
-//  if(SIV > 3)
-//    digitalWrite(statLED, HIGH);
-//  else
-//    digitalWrite(statLED, LOW);
-//
+  else
+  {
+    //Display no signal message
+    lcd.setCursor(3, 1);
+    lcd.print("No GPS Signal");
+  }
+
+
 
 
 }
 
-//Sends a string over SPI
-void spiSendString(char* data)
-{
-  digitalWrite(csPin, LOW); //Drive the CS pin low to select OpenLCD
-  SPI.transfer('|'); //Put LCD into setting mode
-  SPI.transfer('-'); //Send clear display command
-  for(byte x = 0 ; data[x] != '\0' ; x++) //Send chars until we hit the end of the string
-    SPI.transfer(data[x]);
-  digitalWrite(csPin, HIGH); //Release the CS pin to de-select OpenLCD
-}
+
 
 
 
@@ -229,34 +285,29 @@ boolean checkGPS()
   //Give up after a second of polling
   while (millis() - start < 1500)
   {
-    //Serial.println("checkGPS: Loop while millis() - start < 1500");
-
-    
+    // Determine if GPS information is recievable
     if(GPSSerial.available())
     {
       
-      if(GPSSerial.read() == '$') //Spin until we get to the start of a sentence
-      {
-        //Get "GPGGA,"
-        
+      if(GPSSerial.read() == '$') // Read characters until we get to the start of a sentence
+      {        
+        // Read sentence type
         char sentenceType[6];
         for(byte x = 0 ; x < 6 ; x++)
         {
-          //Serial.println("checkGPS: For loop ");
           while(GPSSerial.available() == 0) 
           {
-            delay(1); //Wait
-            
+            delay(1); //Wait            
           }
           sentenceType[x] = GPSSerial.read();
         }
         sentenceType[5] = '\0';
-         //Serial.println(sentenceType); 
-
          
-        if(sentenceType[3] == 'G' && sentenceType[4] == 'A') // Continue if format is GPGGA
+        if(sentenceType[3] == 'G' && sentenceType[4] == 'A') // Continue if format is GPGGA ----------------------------------------------
         { 
           //We are now listening to the GPGGA sentence for time and number of sats
+          //$Message ID,UTC Time,Latitude,N/S,Longitude,E/W,Pos Indicator,SIV,HDOP,MSL Altitude,Geoidal Seperation,Units,Age of Diff Corr,CheckSum,<CR><LF>
+          //6d,9d,10d,1d,11d,1d,1d,2d,4d,4d,1d,?,?,3d,?
           //$GPGGA,145205.00,3902.08127,N,10415.90019,W,2,08,2.68,1611.4,M,-21.3,M,,0000*5C
           
           //Grab time
@@ -277,8 +328,47 @@ boolean checkGPS()
           //Serial.println(time);
           
           
-          //Wait for 6 commas to go by
-          for(byte commaCounter = 6 ; commaCounter > 0 ; )
+          //Wait for 3 commas to go by
+          for(byte commaCounter = 3 ; commaCounter > 0 ; )
+          {
+            while(GPSSerial.available() == 0) delay(1); //Wait
+            char incoming = GPSSerial.read(); //Get time characters
+            if(incoming == ',') commaCounter--;
+          }
+
+          //Grab Longitude
+          for(byte x = 0 ; x < 11 ; x++)
+          {
+            while(GPSSerial.available() == 0) delay(1); //Wait
+            if (x<3)
+            {
+              Longitude[x] = GPSSerial.read(); //Get sats in view characters
+            }
+          }
+          Longitude[3] = '\0';
+          //Serial.println(Longitude);
+
+          //Wait for 1 comma to go by
+          for(byte commaCounter = 1 ; commaCounter > 0 ; )
+          {
+            while(GPSSerial.available() == 0) delay(1); //Wait
+            char incoming = GPSSerial.read(); //Get time characters
+            if(incoming == ',') commaCounter--;
+          }
+
+
+
+          //Grab Direction, E or W of UTC
+          for(byte x = 0 ; x < 1 ; x++)
+          {
+            while(GPSSerial.available() == 0) delay(1); //Wait
+              Dir[x] = GPSSerial.read(); //Get sats in view characters
+          }
+          Dir[1] = '\0';
+          //Serial.println(Dir);
+
+          //Wait for 2 commas to go by
+          for(byte commaCounter = 2 ; commaCounter > 0 ; )
           {
             while(GPSSerial.available() == 0) delay(1); //Wait
             char incoming = GPSSerial.read(); //Get time characters
@@ -297,9 +387,11 @@ boolean checkGPS()
           //Once we have GPGGA, we should already have GPRMC so return
           return(true);
         }
-        else if(sentenceType[3] == 'M' && sentenceType[4] == 'C')
+        else if(sentenceType[3] == 'M' && sentenceType[4] == 'C')  // Continue if format is GPRMC ----------------------------------------------
         {
           //We are now listening to GPRMC for the date
+          //Message ID,UTC Time,Status,Latitude,N/S,Longitude,E/W,Speed,Course,Date,Magnetic Variation, Mode, Checksum,<CR><LF>
+          //6d,9d,1d,10d,1d,11d,1d,6d,6d,?,1d,3d,?
           //$GPRMC,145205.00,A,3902.08127,N,10415.90019,W,0.772,,010115,,,D*6A
 
           //Wait for 8 commas to go by
@@ -341,46 +433,45 @@ boolean checkGPS()
 //Given date and hours, convert to local time using DST
 void convertToLocal(byte* day, byte* month, int* year, byte* hours)
 {
-  //Since 2007 DST starts on the second Sunday in March and ends the first Sunday of November
-  //Let's just assume it's going to be this way for awhile (silly US government!)
-  //Example from: http://stackoverflow.com/questions/5590429/calculating-daylight-savings-time-from-only-date
-
-  boolean dst = false; //Assume we're not in DST
-
-  if(*month > 3 && *month < 11) dst = true; //DST is happening!
-
-  byte DoW = day_of_week(*year, *month, *day); //Get the day of the week. 0 = Sunday, 6 = Saturday
-
-  //In March, we are DST if our previous Sunday was on or after the 8th.
-  int previousSunday = *day - DoW;
-
-  if (*month == 3)
+  // Determine if the user has declared DST
+  if (digitalRead(DSTSwitch))
   {
-    if(previousSunday >= 8) dst = true; 
-  } 
-
-  //In November we must be before the first Sunday to be dst.
-  //That means the previous Sunday must be before the 1st.
-  if(*month == 11)
-  {
-    if(previousSunday <= 0) dst = true;
+     DST = false;
   }
-  if(dst == true) *hours = *hours + 1; //If we're in DST add an extra hour
+  else
+  {
+    DST = true;
+    *hours = *hours + 1; //In DST add an extra hour
+  }
 
+  // Determine time zone based on Longitude
+  float Long = 0;
+  Long = (Longitude[0] - '0') * 100;
+  Long += (Longitude[1] - '0') * 10;
+  Long += (Longitude[2] - '0');
+  if (Dir[0] == 'W')
+  {
+    TimeZone = -1 * ceil(Long/15);
+  }
+  else
+  {
+    TimeZone = ceil(Long/15);
+  }
 
-  //Convert UTC hours to local current time using local_hour
-  if(*hours < local_hour_offset)
+  
+  //Convert UTC hours to local current time based on time zone
+  if(*hours < TimeZone)
   {
     //Go back a day in time
     *day = *day - 1;
     
     if(*day == 0)
     {
-      //Jeesh. Figure out what month this drops us into
+      //Determine if this changes the date
       *month = *month - 1;
       
       if(*month == 1) *day = 31;
-      if(*month == 2) *day = 28; //Not going to deal with it
+      if(*month == 2) *day = 28; 
       if(*month == 3) *day = 31;
       if(*month == 4) *day = 30;
       if(*month == 5) *day = 31;
@@ -400,7 +491,7 @@ void convertToLocal(byte* day, byte* month, int* year, byte* hours)
     
     *hours = *hours + 24; //Add 24 hours before subtracting local offset
   }
-  *hours = *hours - local_hour_offset;
+  *hours = *hours + TimeZone;
   if(*hours > 12) *hours = *hours - 12; //Get rid of military time
   
 }
@@ -439,12 +530,16 @@ void crackTime(byte* hours, byte* minutes, byte* seconds)
   }
 }
 
+
+
 //Given the sats string return satellites in view
 void crackSatellites(byte* SIV)
 {
+  //Serial.println(sats);
   *SIV = (sats[0] - '0') * 10;
   *SIV += (sats[1] - '0');
 }
+
 
 
 //Given the current year/month/day
