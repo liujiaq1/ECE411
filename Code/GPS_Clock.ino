@@ -148,6 +148,7 @@ char LocDisplay[20];
 char EASDisplay[20];
 bool SATtime = false;
 bool SATLong = false;
+bool SATLat = false;
 
 void setup()
 {
@@ -181,9 +182,7 @@ void setup()
   lcd.setCursor(0, 3); // set the cursor to column 2, line 0
   lcd.print("     Jia, & Liu     ");
 
-  //delay(10000);
-  lcd.saveSplash(); //Save this current text as the splash screen at next power on
-  lcd.enableSplash(); //This will cause the splash to be displayed at power on
+  delay(10000);
 
   //Clear the display & set backlight
   lcd.clear();
@@ -328,11 +327,16 @@ void loop()
 
 
 
-
+    if(SATLat & SATLong)
+    {
     sprintf(LocDisplay, "Loc: %02d.%02d%s %03d.%02d%s        ", (int)Lat, (int)((Lat - ((int)Lat)) * 100 + .01), LatDir, (int)Long, (int)((Long - ((int)Long)) * 100 + .01), LongDir);
-    //sprintf(EASDisplay, "Elevation: %d.%01dm     ", (int) EAS,(int)((EAS-((int)EAS))*10+.01));
     sprintf(EASDisplay, "Elevation: %dm     ", (int) EAS);
-    //}
+    }
+    else
+    {
+      sprintf(LocDisplay, "                    ");
+      sprintf(EASDisplay, "                    ");
+    }
     lcd.setCursor(0, 2);
     lcd.print(LocDisplay);
     //Serial.println(LocDisplay);
@@ -475,12 +479,11 @@ boolean checkGPS()
               if (Latitude[x] == ',')
               {
                 Serial.println("No Latitude found");
-                return (false);
               }
             }
           }
           Latitude[4] = '\0';
-          Serial.println(Latitude);
+          //Serial.println(Latitude);
 
 
           //Wait for 1 comma to go by
@@ -673,8 +676,7 @@ void convertToLocal(byte* day, byte* month, int* year, int* hours)
     DST = true;
     *hours = *hours + 1; //In DST add an extra hour
   }
-  Serial.println("------");
-  Serial.println(Latitude[1]);
+
   
 
   //Convert Longitude
@@ -682,7 +684,7 @@ void convertToLocal(byte* day, byte* month, int* year, int* hours)
   Lat += (Latitude[2] - '0');
   Lat += (Latitude[3] - '0') * 0.1;
   Lat += (Latitude[4] - '0') * 0.01;
-  Serial.println(Lat);
+  //Serial.println(Lat);
 
   // Determine time zone based on Longitude
 
